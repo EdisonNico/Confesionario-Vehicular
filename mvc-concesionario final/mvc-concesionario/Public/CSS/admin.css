@@ -1,0 +1,307 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  /* Ocupa el espacio disponible y empuja el footer hacia abajo */
+  background-color: white;
+  /* Fondo del main */
+}
+
+/*  HEADER  */
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  color: black;
+  background-color: #f0f0f0;
+  /* Fondo del header */
+}
+
+
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/*  MAIN  */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.addcoche {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0.5rem;
+  background: transparent;
+  backdrop-filter: blur(80px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.btn-addusuario,
+.btn-addcoche {
+  grid-column: span 2;
+  padding: 1px 90px;
+}
+.formaddusuario,
+.formaddcoche {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(80px);
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+h2 {
+  color: #0a0429;
+}
+
+.tab-btn {
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: #0a0429;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: #2d1c57;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 14px;
+}
+
+.bg-green-600 {
+  background-color: #38a169;
+}
+
+.bg-green-700 {
+  background-color: #2f855a;
+}
+
+.text-white {
+  color: white;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-blue-600 {
+  color: #3182ce;
+}
+
+.text-blue-900 {
+  color: #2b6cb0;
+}
+
+.text-red-600 {
+  color: #e53e3e;
+}
+
+.text-red-900 {
+  color: #c53030;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-green-100 {
+  background-color: #c6f6d5;
+}
+
+.text-green-800 {
+  color: #276749;
+}
+
+.bg-yellow-100 {
+  background-color: #fefcbf;
+}
+
+.text-yellow-800 {
+  color: #7a5b2a;
+}
+
+.bg-red-100 {
+  background-color: #fed7d7;
+}
+
+.text-red-800 {
+  color: #9b2c2c;
+}
+
+.bg-blue-100 {
+  background-color: #ebf8ff;
+}
+
+.text-blue-800 {
+  color: #2b6cb0;
+}
+
+/* FOOTER  */
+footer {
+  backdrop-filter: blur(80px);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: black;
+  background-color: #e4e4e4;
+  /* Fondo del footer */
+}
+
+footer h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.redes ul {
+  display: flex;
+  gap: 15px;
+}
+
+.redes a {
+  font-size: 30px;
+}

@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popping", sans-serif;
+  color: #fff;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0429;
+}
+
+body {
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../Imagenes/Fondorecuperar.jpg'); /* cambia según tu ruta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.barrita {
+  z-index: 1;
+}
+
+.barrita a {
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.barrita a:hover {
+  transform: scale(1.2);
+}
+
+.navbar li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  /* Línea debajo del texto */
+  background-color: #d4b483;
+  /* Color de la línea */
+  transition: width 0.3s ease;
+  /* Animación */
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-derecha {
+  display: flex;
+  text-decoration: none;
+  gap: 1rem;
+
+}
+
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.frase h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.frase p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/*par responsibidad*/
+@media(max-width:991px) {
+  .navbar {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .logo a {
+    font-size: 25px;
+  }
+
+  .nav-derecha {
+    display: none;
+  }
+}
+
+/* Contenedor principal de contenido */
+
+.contenido {
+  display: flex;
+  /* Contenido en línea flexible */
+  align-items: center;
+  /* Centra verticalmente los hijos */
+  justify-content: center;
+  /* Centra horizontalmente los hijos */
+  min-height: 100vh;
+  /* Altura mínima 100% de la ventana */
+  padding: 40px;
+  /* Espacio interno alrededor del contenido */
+  flex-wrap: wrap;
+}
+
+/* Contenedor de la imagen */
+.ferrari {
+  flex: 1;
+  /* Ocupa igual espacio que el texto */
+  padding: 20px;
+  /* Espacio interno alrededor */
+}
+
+/* Imagen*/
+.ferrari img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contenedor del texto */
+.texto {
+  flex: 1;
+  /* Ocupa igual espacio que la imagen */
+  padding: 20px 40px 20px 20px;
+  /* Más espacio a la derecha para separación */
+  color: white;
+  /* Texto en blanco para contraste */
+  text-align: justify;
+  /* Texto justificado */
+  margin-right: 70px;
+  /* Margen externo derecho para separación extra */
+  font-size: 20px;
+  /* Tamaño de letra */
+}
+
+
+
+
+/* Pie de página */
+footer {
+  background-color: #141216;
+  padding: 2rem;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+footer div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.redes ul {
+  display: flex;
+  gap: 15px;
+
+}
+
+.redes a {
+  font-size: 30px;
+}
+
+/* Título del formulario */
+.formulario h1 {
+  font-size: 25px;
+  /* Tamaño del texto */
+  text-align: center;
+  /* Centrado horizontal */
+}
+
+/* Contenedores de cada campo del formulario */
+.formulario .condenidoF {
+  width: 100%;
+  /* Ancho total */
+  height: 50%;
+  /* Altura relativa */
+  margin: 30px 0;
+  /* Márgenes arriba y abajo */
+}
+
+/* Inputs del formulario */
+.formulario input {
+  width: 100%;
+  /* Ancho total */
+  height: 100%;
+  /* Altura total del contenedor padre */
+  background: transparent;
+  /* Fondo transparente */
+  border: none;
+  /* Sin borde */
+  outline: none;
+  /* Sin outline al enfocar */
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  /* Borde semitransparente */
+  border-radius: 40px;
+  /* Bordes muy redondeados */
+  font-size: 16px;
+  /* Tamaño del texto */
+  color: #fff;
+  /* Texto blanco */
+  padding: 20px 45px 20px 20px;
+  /* Relleno interno (espacio para iconos o texto) */
+}
+
+/* Placeholder de los inputs */
+.formulario input::placeholder {
+  color: #fff;
+  /* Color blanco para el texto de ayuda */
+}
+
+/* Botón del formulario */
+.formulario .btn {
+  width: 100%;
+  /* Ancho total */
+  height: 45px;
+  /* Altura fija */
+  color: #000;
+  background: #fff;
+  /* Fondo blanco */
+  border: none;
+  /* Sin borde */
+  outline: none;
+  /* Sin outline */
+  border-radius: 40px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10 rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  cursor: pointer;
+  /* Cursor puntero para indicar click */
+  font-weight: 600;
+  /* Texto en negrita */
+}
+
+/* Área de texto (textarea) */
+.formulario textarea {
+  width: 100%;
+  /* Ancho total */
+  height: 100px;
+  /* Altura fija */
+  background: transparent;
+  /* Fondo transparente */
+  border: none;
+  /* Sin borde */
+  outline: none;
+  /* Sin outline */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  /* Borde semitransparente */
+  border-radius: 20px;
+  /* Bordes redondeados */
+  font-size: 16px;
+  /* Tamaño del texto */
+  padding: 20px;
+  /* Espacio interno */
+  resize: none;
+  /* No permite redimensionar */
+}
+
+.formulario textarea::placeholder {
+  color: #fff;
+}
+
+/* Contenedor de términos y enlaces */
+.terminos {
+  display: flex;
+  /* Flex para distribución vertical */
+  flex-direction: column;
+  align-items: flex-start;
+  /* Alineado a la izquierda */
+  gap: 12px;
+  /* Espacio entre enlaces */
+  padding-left: 30px;
+  /* Espacio desde el borde izquierdo */
+  font-size: 15px;
+  /* Tamaño del texto */
+  max-width: 80%;
+  /* Ancho máximo relativo */
+  margin-top: 25px;
+  /* Margen superior */
+}
+
+.terminos a {
+  color: white;
+  text-decoration: none;
+  /* Sin subrayado */
+}

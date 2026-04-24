@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "popping", sans-serif;
+    color: #fff;
+}
+
+body {
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../Imagenes/blur.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background-color: #0a0429;
+    /*background: transparent;
+  backdrop-filter: blur(80px);*/
+  margin-bottom: 15px;
+}
+
+/*navbar*/
+a {
+    text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.barrita {
+  z-index: 1;
+}
+
+.barrita a {
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.barrita a:hover {
+  transform: scale(1.2);
+}
+
+.navbar li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  /* Línea debajo del texto */
+  background-color: #d4b483;
+  /* Color de la línea */
+  transition: width 0.3s ease;
+  /* Animación */
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-derecha {
+  display: flex;
+  text-decoration: none;
+  gap: 1rem;
+
+}
+
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.frase h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.frase p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+/*par responsibidad*/
+@media(max-width:991px) {
+  .navbar {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .logo a {
+    font-size: 25px;
+  }
+
+  .nav-derecha {
+    display: none;
+  }
+}
+
+
+/*contenido eventos*/
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+}
+
+.contenedor a {
+
+    transition: transform 0.5s ease;
+}
+
+.contenedor a:hover {
+    transform: scale(1.1);
+}
+
+.evento {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 7px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 450px;
+    max-height: 500px;
+
+}
+
+.evento img {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 4 / 2.2;
+    object-fit: cover;
+    height: auto;
+    display: block;
+
+}
+
+.detalles {
+    padding: 20px;
+}
+
+.detalles h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.detalles p {
+    margin-bottom: 15px;
+}
+
+.detalles div {
+    margin-bottom: 5px
+}
+
+
+/*footeer*/
+footer {
+    background-color: #141216;
+    /*background: transparent;
+  backdrop-filter: blur(80px);*/
+    padding: 2rem;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+footer h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+footer li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.redes ul {
+    display: flex;
+    gap: 15px;
+
+}
+
+.redes a {
+    font-size: 30px;
+}

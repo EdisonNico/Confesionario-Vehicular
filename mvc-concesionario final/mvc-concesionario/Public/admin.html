@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ACCELERATE AND EXCEED</title>
+    <link rel="stylesheet" href="./CSS/admin.css">
+    <script src="./Javascript/admin.js"></script>
+</head>
+
+<body>
+    <header>
+        <!--Botones navegador-->
+        <nav class="navbar">
+            </div>
+            <div class="logo"><a href="_Principal.php">AE</a></div>
+            
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Admin Panel -->
+        <section id="admin" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center">Panel de Administración</h2>
+
+                <!-- Tabs -->
+                <div class="flex flex-wrap border-b border-gray-300 mb-6">
+                    <button class="tab-btn py-2 px-4 font-medium text-blue-600 border-b-2 border-blue-600"
+                        data-tab="vehicles" onclick="showTab('vehicles')">Vehículos</button>
+                    <button class="tab-btn py-2 px-4 font-medium text-gray-500 hover:text-gray-700" data-tab="users"
+                        onclick="showTab('users')">Usuarios</button>
+                    
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-content active" id="vehicles-tab">
+                    <div class="flex justify-end mb-4">
+                        <button onclick="showhidecoches()" id="mostrarform"
+                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                            Agregar Vehículo
+                        </button>
+                    </div>
+                    <div class="formaddcoche">
+                        <form action="" class="addcoche">
+                            <input type="hidden" id="id-coche">
+                            <input type="text" id="marca" placeholder="Marca">
+                            <input type="text" id="modelo" placeholder="Modelo">
+                            <input type="text" id="tipo" placeholder="Tipo">
+                            <input type="number" id="kilometraje" placeholder="Kilometraje">
+                            <input type="number" id="anio" placeholder="Año">
+                            <input type="number" id="precio" placeholder="Precio">
+                            <select id="estatus">
+                                <option value="Disponible">Disponible</option>
+                                <option value="Vendido">Vendido</option>
+                            </select>
+                            <div class="btn-addcoche">
+                                <button onclick="confirmarCoche()"
+                                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                                    Confirmar
+                                </button>
+                                <button onclick="cancelarFormulario()"
+                                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Vehicle Management Table -->
+                    <div class="bg-white rounded-lg shadow overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table id="tabla-coches" class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-[#0a0429] text-white">
+                                    <tr>
+                                        <th>ID </th>
+                                        <th> Imagen</th>
+                                        <th> Modelo</th>
+                                        <th> Marca</th>
+                                        <th> Año </th>
+                                        <th> Precio</th>
+                                        <th> Estatus</th>
+                                        <th> Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="users-tab" style="display: none;">
+                    <div class="flex justify-end mb-4">
+                        <button onclick="showhidesuario()"
+                            class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                            Agregar Usuario
+                        </button>
+                    </div>
+                    <div class="formaddusuario">
+                        <form action="" class="addusuario">
+                            <input type="hidden" id="id-usuario">
+                            <input type="text" id="nombre" placeholder="Nombre">
+                            <input type="email" id="correo" placeholder="Correo">
+                            <input type="password" id="contrasenia" placeholder="Contraseña">
+                            <select id="rol">
+                                <option value="Cliente">Cliente</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                            <div class="btn-addusuario">
+                                <button onclick="confirmarUsuario()"
+                                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                                    Confirmar
+                                </button>
+                                <button onclick="cancelarFormulario()"
+                                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Users Management Table -->
+                    <div class="bg-white rounded-lg shadow overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table id="tabla-usuarios" class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-[#0a0429] text-white">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Correo</th>
+                                        <th>Rol</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="terminos">
+            <h1>Información legal</h1>
+            <ul>
+                <li><a href="">Aviso legal</a></li>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Política de cookies</a></li>
+                <li><a href="">Términos y condicones</a></li>
+                <li><a href="">Configuracion de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="Service">
+            <h1>Servicios</h1>
+            <ul>
+                <li><a href="">Martenimiento</a></li>
+                <li><a href="">Asistencia en circuito</a></li>
+                <li><a href="">Transporte</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contacto</h1>
+            <ul>
+                <li><a href="">📞 (01) 123-4567</a></li>
+                <li><a href="">✉️ contacto@autoelite.com</a></li>
+                <li><a href="Ubicanos.html">📍 ubicaciones</a></li>
+                <li><a href="">🕐 Lun - Sáb: 9:00 am - 6:00 pm</a></li>
+            </ul>
+        </div>
+        <div class="redes">
+            <h1>Siguenos</h1>
+            <ul>
+                <li><a href="https://www.instagram.com/edison.durand?igsh=MXZ2MHBpODFyNDJyZA=="><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://x.com/EdisonTucno"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/share/1h6i1kfMjK/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/@edisondurand"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/@F1RSTMOTORS"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

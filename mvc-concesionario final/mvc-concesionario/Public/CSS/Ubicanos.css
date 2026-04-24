@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "popping", sans-serif;
+    color: #fff;
+}
+
+body {
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/*navbar*/
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.barrita {
+    z-index: 1;
+}
+
+.barrita a {
+    display: inline-block;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.barrita a:hover {
+    transform: scale(1.2);
+}
+
+.navbar li {
+    list-style: none;
+    position: relative;
+}
+
+.navbar li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    /* Línea debajo del texto */
+    background-color: #d4b483;
+    /* Color de la línea */
+    transition: width 0.3s ease;
+    /* Animación */
+}
+
+.navbar li:hover::after {
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-derecha {
+    display: flex;
+    text-decoration: none;
+    gap: 1rem;
+
+}
+
+/*par responsibidad*/
+@media(max-width:991px) {
+    .navbar {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .logo a {
+        font-size: 25px;
+    }
+
+    .nav-derecha {
+        display: none;
+    }
+}
+
+/*contenido ubi*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* permite que se acomode en pantallas pequeñas */
+    gap: 1rem;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
+
+
+}
+
+.parrafo {
+    flex: 1 1 300px;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 20px;
+    display: flex;
+    /* convierte en flexbox */
+    flex-direction: column;
+    /* para que los hijos estén en columna */
+    justify-content: center;
+    /* centra verticalmente */
+    align-items: center;
+    /* centra horizontalmente */
+}
+
+.boton button {
+    padding: 12px 30px;
+    border: 2px solid #d4b483;
+    border-radius: 25px;
+    /* media ovalada */
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton button:hover {
+    background-color: #d4b483;
+    color: black;
+}
+
+
+.mapita {
+    flex: 1 1 500px;
+}
+
+.mapita img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/*footeer*/
+footer {
+    background-color: #141216;
+    padding: 2rem;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2 2;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+footer div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+footer h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+footer li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.redes ul {
+    display: flex;
+    gap: 15px;
+
+}
+
+.redes a {
+    font-size: 30px;
+}

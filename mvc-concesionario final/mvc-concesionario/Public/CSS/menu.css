@@ -1,0 +1,64 @@
+/* Reset general */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Estilo del navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Botón del menú (icono de barras) */
+.barrita button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menú lateral oculto por defecto */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  padding: 2rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar el menú cuando tiene la clase "active" */
+.menu-lateral.active {
+  left: 0;
+}
+
+/* Estilo de la lista del menú */
+.menu-lateral ul {
+  list-style: none;
+}
+
+.menu-lateral ul li {
+  margin: 1rem 0;
+}
+
+.menu-lateral ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+
+}
+.menu-lateral a{
+  transition: transform 0.3s ease;
+}
+

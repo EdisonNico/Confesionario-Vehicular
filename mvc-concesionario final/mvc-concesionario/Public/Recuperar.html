@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCELERATE AND EXCEED</title>
+    <link rel="stylesheet" href="./CSS/Recuperar.css">
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <div>
+        <img src="./Imagenes/iniciales.png" alt="iniciales" class="iniciales">
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="wrapper">
+        <form action="../controller/recuperar.php" method="POST">
+            <h1>Recuperar Contraseña</h1>
+
+            <div class="formulario">
+                <input type="email" name="correo" placeholder="Ingresa tu correo" required>
+            </div>
+
+            <div class="formulario">
+                <input type="password" name="nueva_contrasenia" placeholder="Ingresa tu nueva contraseña" required>
+            </div>
+
+            <div class="recordar-recuperar">
+                <label><input type="checkbox"> Recordarme</label>
+                <a href="Login.html">Iniciar sesión</a>
+            </div>
+
+            <button type="submit" class="btn">Recuperar Contraseña</button>
+
+            <div class="Registrarse">
+                <a href="registro.html">Registrarse</a>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

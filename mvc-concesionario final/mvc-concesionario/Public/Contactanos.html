@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/Contactanos.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
+    <script src="./Javascript/menu.js"></script>
+    <title>Contactanos</title>
+</head>
+
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <nav class="navbar">
+            <div class=barrita><a href="" id="toggleMenu"><i class="fa-solid fa-bars" style="color: #e8e8e8;"></i></a></div>
+            </div>
+            <div class="logo"><a href="_Principal.php">AE</a></div>
+            <ul class="nav-derecha">
+                <li><a href="SobreN.html">Sobre Nosotros</a></li>
+                <li><a href="Ubicanos.html">Ubicanos</a></li>
+                <li><a href="Contactanos.html">Contacto</a></li>
+                <li><a href="Login.html">Iniciar Sesión</a></li>
+            </ul>
+            </div>
+        </nav>
+
+        <!-- Menú lateral oculto por defecto, se muestra con el botón hamburguesa -->
+        <nav class="menu-lateral">
+            <ul>
+                <li><a href="Login.html">Iniciar Sesión</a></li>
+                <li><a href="_Principal.html">Inicio</a></li>
+                <li><a href="SobreN.html">Sobre Nosotros</a></li>
+                <li><a href="Galeria.html">Galería</a></li>
+                <li><a href="Coleccion.html">Colección</a></li>
+                <li><a href="Eventos.html">Eventos</a></li>
+                <li><a href="Ubicanos.html">Ubícanos</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <form action="">
+                <h1 id="h1">Contacto</h1>
+                <p id="frase">¡Nos encantaría saber de ti! Si tienes alguna pregunta sobre características,
+                    precios o cualquier otra cosa, nuestro equipo está listo para responder a todas tus preguntas.</p>
+                <div id="formulario">
+                    <label for="Nombre">Nombre Completo</label>
+                    <input type="text" name="Nombre" placeholder="Jhon" required>
+                </div>
+                <div id="formulario">
+                    <label for="Correo">Correo</label>
+                    <input type="email" name="Correo" placeholder="U236497@utp.edu.pe" required>
+                </div>
+                <div id="formulario">
+                    <label for="Telefono">Telefono</label>
+                    <input type="tel" name="Telefono" placeholder="+51 949 549 548" required>
+                </div>
+                <div id="formulario">
+                    <label for="Mensaje">Nombre Completo</label>
+                    <textarea name="Menaje" id="Mensaje" rows="6" placeholder="Escribe tu mensaje aqui"
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="terminos">
+            <h1>Información legal</h1>
+            <ul>
+                <li><a href="">Aviso legal</a></li>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Política de cookies</a></li>
+                <li><a href="">Términos y condicones</a></li>
+                <li><a href="">Configuracion de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="Service">
+            <h1>Servicios</h1>
+            <ul>
+                <li><a href="">Martenimiento</a></li>
+                <li><a href="">Asistencia en circuito</a></li>
+                <li><a href="">Transporte</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contacto</h1>
+            <ul>
+                <li><a href="">📞 (01) 123-4567</a></li>
+                <li><a href="">✉️ contacto@autoelite.com</a></li>
+                <li><a href="Ubicanos.html">📍 ubicaciones</a></li>
+                <li><a href="">🕐 Lun - Sáb: 9:00 am - 6:00 pm</a></li>
+            </ul>
+        </div>
+        <div class="redes">
+            <h1>Siguenos</h1>
+            <ul>
+                <li><a href="https://www.instagram.com/edison.durand?igsh=MXZ2MHBpODFyNDJyZA=="><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://x.com/EdisonTucno"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/share/1h6i1kfMjK/?mibextid=wwXIfr"><i
+                            class="fa-brands fa-square-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/@edisondurand"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/@F1RSTMOTORS"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

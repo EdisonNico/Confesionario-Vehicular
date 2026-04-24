@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popping", sans-serif;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.barrita {
+  z-index: 1;
+}
+
+.barrita a {
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.barrita a:hover {
+  transform: scale(1.2);
+}
+
+.navbar li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  /* Línea debajo del texto */
+  background-color: #d4b483;
+  /* Color de la línea */
+  transition: width 0.3s ease;
+  /* Animación */
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-derecha {
+  display: flex;
+  text-decoration: none;
+  gap: 1rem;
+
+}
+
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.frase h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.frase p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+/*par responsibida*/
+@media(max-width:991px) {
+  .navbar {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .logo a {
+    font-size: 25px;
+  }
+
+  .nav-derecha {
+    display: none;
+  }
+}
+
+
+
+/* cuerpo de pagina */
+main {
+  background-image: url(../Imagenes/fondoMN.png);
+  /* reemplaza con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
+.noticia {
+  position: relative;
+  width: 75vw;
+  max-width: 1500px;
+  margin: 0 auto 20px;
+  /* espacio abajo para separar de botones */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.noticia img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/* Texto superpuesto */
+.texto-superior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 2;
+  /* para que esté encima de la imagen */
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.contenedor-imagen {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 470px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Texto encima de la imagen */
+.titulo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* fondo oscuro */
+  color: #d4b483;
+  /* dorado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+
+/*banner*/
+.banner {
+  width: 100%;
+  background-color: #000;
+  /* fondo negro para contraste */
+  overflow: hidden;
+  padding: 10px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.banner p {
+  display: inline-block;
+  white-space: nowrap;
+  color: #fff;
+  /* texto blanco */
+  font-weight: normal;
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  animation: desplazarTexto 20s linear infinite;
+  /* más lento */
+  position: relative;
+}
+
+@keyframes desplazarTexto {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+
+/* Pie de pagina terminado*/
+footer {
+  background-color: #141216;
+  /*background: transparent;
+  backdrop-filter: blur(80px);*/
+  padding: 2rem;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-top: 0;
+
+
+}
+
+footer h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.redes ul {
+  display: flex;
+  gap: 15px;
+
+}
+
+.redes a {
+  font-size: 30px;
+}
